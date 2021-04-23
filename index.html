@@ -1,0 +1,154 @@
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta content="ie=edge" http-equiv="x-ua-compatible" />
+		<meta content="v1.0" property="op:markup_version" />
+		<title>Hand 'n Foot Scorecard</title>
+		<link
+			crossorigin="anonymous"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+			rel="stylesheet"
+		/>
+		<link href="https://paul-s-reid.com/web-dev/Hand%20%27n%20Foot%20Scorecard-html/index.html" rel="canonical" />
+		<link href="https://paul-s-reid.com/web-dev/Hand%20%27n%20Foot%20Scorecard-html/" rel="canonical" />
+		<link href="style.min.css" rel="stylesheet" />
+		<meta content="Simple Hand 'n Foot Scorecard" itemprop="description" name="description" />
+		<meta content="index, follow, max-snippet: -1, max-image-preview:large, max-video-preview: -1" name="robots" />
+		<meta content="website" property="og:type" />
+		<meta content="Hand 'n Foot Scorecard" property="og:title" />
+		<meta content="Simple Hand 'n Foot Scorecard" property="og:description" />
+		<meta content="https://paul-s-reid.com/web-dev/Hand%20%27n%20Foot%20Scorecard-html/" property="og:url" />
+		<meta content="Hand 'n Foot Scorecard" property="og:site_name" />
+		<meta content="banner.png" property="og:image" />
+		<link href="banner.png" rel="apple-touch-startup-image" />
+		<meta content="Hand 'n Foot Scorecard" name="apple-mobile-web-app-title" />
+		<meta content="Hand 'n Foot Scorecard logo: Square box saying 'Hand 'n Foot'" property="og:image:alt" />
+		<meta content="banner.png" property="og:image:secure_url" />
+		<meta content="en_US" property="og:locale" />
+		<meta content="Paul Reid" property="article:author" />
+		<meta content="130" property="og:image:width" />
+		<meta content="129" property="og:image:height" />
+		<meta content="summary_large_image" name="twitter:card" />
+		<meta content="Simple Hand 'n Foot Scorecard" name="twitter:description" />
+		<meta content="Hand 'n Foot Scorecard" name="twitter:title" />
+		<meta content="banner.png" name="twitter:image" />
+		<meta content="Hand 'n Foot Scorecard logo: Square box saying 'Hand 'n Foot'" name="twitter:image:alt" />
+		<meta content="https://paul-s-reid.com/web-dev/Hand%20%27n%20Foot%20Scorecard-html/" name="twitter:url" />
+		<link href="favicon.png" rel="icon" sizes="130x129" />
+		<link href="favicon.png" rel="apple-touch-icon" />
+		<link href="favicon.png" rel="apple-touch-icon-precomposed" />
+		<link color="#f3eb39" href="favicon.png" rel="mask-icon" />
+		<meta content="favicon.png" name="msapplication-TileImage" />
+		<meta content="Hand 'n Foot Scorecard" name="application-name" />
+		<meta content="index, follow" name="robots" />
+		<meta content="index, follow" name="googlebot" />
+		<meta content="Visual Studio Code" name="generator" />
+		<meta content="To-Do List" name="subject" />
+		<meta content="General" name="rating" />
+		<link href="humans.txt" rel="author" />
+		<link href="mailto:paul@reid-family.org" rel="me" />
+		<link href="sms:+18472243009" rel="me" />
+		<meta content="Hand 'n Foot Scorecard" itemprop="name" />
+		<meta content="favicon.png" itemprop="image" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="#f3eb39" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="#f3eb39" name="theme-color" />
+		<meta content="yes" name="mobile-web-app-capable" />
+		<meta content="browserconfig.xml" name="msapplication-config" />
+		<meta content="webkit|ie-comp|ie-stand" name="renderer" />
+		<meta content="landscape" name="x5-orientation" />
+		<meta content="TRUE" name="x5-fullscreen" />
+		<meta content="app" name="x5-page-mode" />
+		<meta content="yes" name="full-screen" />
+		<meta content="force" name="imagemode" />
+		<meta content="application" name="browsermode" />
+		<meta content="no" name="wap-font-scale" />
+	</head>
+
+	<body>
+		<div>
+			<div>
+				<div id="title">
+					<h1>Add players</h1>
+					<h2>
+						Hand 'n Foot <br />
+						Scorecard
+					</h2>
+				</div>
+			</div>
+		</div>
+		<ol id="forms">
+			<li>
+				Fill in players' names. Leave extra fields blank.<br />
+				<form action="#teams">
+					<input name="step" type="hidden" value="1" />
+					<input name="players" placeholder="Player 1" required type="text" />
+					<input name="players" placeholder="Player 2" required type="text" />
+					<input name="players" placeholder="Player 3" type="text" />
+					<input name="players" placeholder="Player 4" type="text" />
+					<input name="players" placeholder="Player 5" type="text" />
+					<input name="players" placeholder="Player 6" type="text" />
+					<input type="submit" value="Next" />
+				</form>
+			</li>
+			<li id="teams">
+				How many teams do you want?<br />
+				<form action="#dragForm">
+					<input name="step" type="hidden" value="2" />
+					<input id="players" name="playersJSON" type="hidden" />
+					<label class="people4">
+						<input name="teams" value="2" required type="radio" /> 2 teams; 2 people per team
+					</label>
+					<label class="people4"> <input name="teams" value="4" required type="radio" /> solo </label>
+					<label class="people6">
+						<input name="teams" value="2" required type="radio" /> 2 teams; 3 people per team
+					</label>
+					<label class="people6">
+						<input name="teams" value="3" required type="radio" /> 3 teams; 2 people per team
+					</label>
+					<label class="people6"> <input name="teams" value="6" required type="radio" /> solo </label>
+					<input type="submit" value="Next" />
+				</form>
+			</li>
+			<li id="dragForm">
+				Drag-and-drop players to create teams.<br />
+				<form action="first_scores.html">
+					<input name="step" type="hidden" value="3" />
+					<div class="dropTarget" id="t1">
+						<div class="draggable" id="d1">Player 1</div>
+					</div>
+					<div class="dropTarget" id="t2">
+						<div class="draggable" id="d2">Player 2</div>
+					</div>
+					<div class="dropTarget" id="t3">
+						<div class="draggable" id="d3">Player 3</div>
+					</div>
+					<div class="dragAndDrop" id="p4">
+						<div class="draggable" id="d4">Player 4</div>
+					</div>
+					<div class="dragAndDrop" id="p5">
+						<div class="draggable" id="d5">Player 5</div>
+					</div>
+					<div class="dragAndDrop" id="p6">
+						<div class="draggable" id="d6">Player 6</div>
+					</div>
+					<input type="hidden" name="teamsJSON" id="teamsJSON" />
+					<input type="submit" value="Next" />
+				</form>
+			</li>
+		</ol>
+		<p id="browseHappy">
+			<noscript
+				>You are using an <strong>outdated</strong> browser. Please upgrade your browser to improve your
+				experience.</noscript
+			>
+			<!--[if lt IE 7
+				]>You are using an <strong>outdated</strong> browser. Please upgrade your browser to improve your
+				experience.
+			<![endif]-->
+		</p>
+		<script src="script.min.js"></script>
+	</body>
+</html>

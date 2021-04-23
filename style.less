@@ -1,0 +1,161 @@
+input[type="submit"]:disabled {
+	background-color: rgb(239 239 239);
+	color: #000;
+	border: rgb(118 118 118) solid 0.5px;
+}
+
+[draggable="TRUE"] {
+	cursor: grab;
+}
+
+body > :first-child {
+	background-color: var(--primary);
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+
+	> div {
+		background-color: var(--secondary);
+		border-radius: 5px;
+	}
+}
+
+body,
+html {
+	--primary: #f3eb39;
+	--secondary: #dd41df;
+	--tertiary: #c33a72;
+	margin: 0;
+	padding: 0;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	font-display: swap;
+
+	@media screen and (max-width: 750px) {
+		overflow-x: hidden;
+	}
+
+	@media screen and (max-width: 375px) {
+		font-size: 0.75em;
+	}
+}
+
+#title {
+	text-align: center;
+	background: var(--primary);
+	border: var(--tertiary) solid 5px;
+	color: var(--tertiary);
+	border-radius: 94px;
+
+	br {
+		display: none;
+	}
+
+	br {
+		@media screen and (max-width: 280px) {
+			display: block;
+		}
+	}
+}
+
+input {
+	margin: 1px;
+}
+
+select {
+	overflow: hidden;
+	padding-right: 15px;
+	appearance: none;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+option[value="select one"] {
+	display: none;
+}
+
+b,
+strong {
+	font-size: 22px;
+}
+
+#browseHappy {
+	margin-top: 1em;
+	font-size: 20px;
+}
+
+.dragAndDrop {
+	background-color: #d5d5d5;
+}
+
+.dropTarget {
+	background-color: #fff;
+}
+
+#forms {
+	font-size: 1.5em;
+	padding: 0;
+	margin: 122.4px 10px 10px 30px;
+
+	@media screen and (max-width: 375px) {
+		margin-top: 96.8px;
+	}
+
+	@media screen and (max-width: 280px) {
+		margin-top: 125.6px;
+	}
+
+	li {
+		border: solid 1px var(--dark);
+		margin-top: 15px;
+		border-radius: 20px;
+		padding: 10px;
+
+		&::after {
+			display: block;
+			content: " ";
+			margin-top: -380px;
+			height: 380px;
+			visibility: hidden;
+			pointer-events: none;
+		}
+	}
+
+	form {
+		display: inline-flex;
+		margin-top: 10px;
+
+		&,
+		& > :not(br) {
+			width: 100%;
+		}
+
+		@media screen and (max-width: 750px) {
+			display: block !important;
+		}
+	}
+}
+
+.disabled {
+	background-color: hsl(0 0% 97% / 0.3);
+	border-color: rgb(144 146 148);
+	opacity: 0.5;
+	z-index: 1;
+}
+
+.current {
+	border: solid 5px var(--green) !important;
+	background: #29a8472e;
+}
+
+.dragAndDrop,
+.dropTarget {
+	padding: 1px 2px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #767676;
+	border-radius: 2px;
+	margin: 1;
+}
