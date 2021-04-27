@@ -1,16 +1,16 @@
 var index = 0;
 var style = document.createElement("style");
 style.innerHTML = ".people6{display:none}";
-var players = getParamIfAvailabe("players", FALSE)
-	? getParamIfAvailabe("players", FALSE)
-	: JSON.parse(getParamIfAvailabe("playersJSON", TRUE));
-var team = getParamIfAvailabe("teamsJSON", FALSE);
+var players = getParamIfAvailabe("players", false)
+	? getParamIfAvailabe("players", false)
+	: JSON.parse(getParamIfAvailabe("playersJSON", true));
+var team = getParamIfAvailabe("teamsJSON", false);
 var step = 0;
 
 if ((players.length - 2) * (players.length - 6) <= 0 && !team) {
 	//find step -- step is 0-based!
-	step = getParamIfAvailabe("step", FALSE)
-		? getParamIfAvailabe("step", FALSE)
+	step = getParamIfAvailabe("step", false)
+		? getParamIfAvailabe("step", false)
 		: 0;
 }
 
@@ -52,7 +52,7 @@ switch (
 	case 1: //try to auto-set teams; passes player names to step 2
 		players.forEach(function (player, index, array) {
 			//remove undefined players
-			if (player == "" || player == undefined || player == NULL) {
+			if (player == "" || player == undefined || player == null) {
 				array.splice(index, 1);
 			}
 		});
@@ -86,7 +86,7 @@ switch (
 				.getElementById("dragForm")
 				.getElementsByClassName("draggable"),
 		).forEach(function (element) {
-			element.setAttribute("draggable", "TRUE"); //allow drag
+			element.setAttribute("draggable", "true"); //allow drag
 			element.setAttribute("ondragstart", "drag(event)"); //sets the data being transferred
 		});
 
