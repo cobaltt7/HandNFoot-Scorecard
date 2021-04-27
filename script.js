@@ -1,11 +1,11 @@
-var index       = 0;
-var style       = document.createElement("style");
+var index = 0;
+var style = document.createElement("style");
 style.innerHTML = ".people6{display:none}";
-var players     = getParamIfAvailabe("players", false)
+var players = getParamIfAvailabe("players", false)
 	? getParamIfAvailabe("players", false)
 	: JSON.parse(getParamIfAvailabe("playersJSON", true));
-var team        = getParamIfAvailabe("teamsJSON", false);
-var step        = 0;
+var team = getParamIfAvailabe("teamsJSON", false);
+var step = 0;
 
 if ((players.length - 2) * (players.length - 6) <= 0 && !team) {
 	//find step -- step is 0-based!
@@ -46,7 +46,8 @@ Object.values(document.getElementsByClassName("disabled")).forEach(function (
 	});
 });
 
-switch (step //main actions for each case
+switch (
+	step //main actions for each case
 ) {
 	case 1: //try to auto-set teams; passes player names to step 2
 		players.forEach(function (player, index, array) {
@@ -101,7 +102,8 @@ switch (step //main actions for each case
 	//ADD following what's specified in s2
 }
 
-switch (step //actions that apply to multiple cases
+switch (
+	step //actions that apply to multiple cases
 ) {
 	case 2:
 	case 3:
@@ -125,7 +127,8 @@ function drop(element) {
 	//drop
 	element.preventDefault(); //allow drop
 	var target = element.target.getAttribute("draggable")
-		? element.target.parentElement		: element.target; //prevent dropping in <p></p>; force dripping in <div></div>
+		? element.target.parentElement
+		: element.target; //prevent dropping in <p></p>; force dripping in <div></div>
 	target.appendChild(
 		document.getElementById(element.dataTransfer.getData("text")),
 	); //drop

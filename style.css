@@ -1,114 +1,114 @@
 input[type="submit" i]:disabled {
-    background-color: rgb(239 239 239);
-    color: #000;
-    border: rgb(118 118 118) solid 0.5px;
+	background-color: rgb(239 239 239);
+	color: #000;
+	border: rgb(118 118 118) solid 0.5px;
 }
 
 [draggable="true"] {
-    cursor: grab;
+	cursor: grab;
 }
 
 body,
 html {
-    --primary: #F3EB39;
-    --secondary: #DD41DF;
-    --tertiary: #C33A72;
-    margin: 0;
-    padding: 0;
-    font-display: swap;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", arial, sans-serif;
+	--primary: #f3eb39;
+	--secondary: #dd41df;
+	--tertiary: #c33a72;
+	margin: 0;
+	padding: 0;
+	font-display: swap;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", arial, sans-serif;
 }
 
 #title {
-    text-align: center;
-    background: var(--primary);
-    border: var(--tertiary) solid 5px;
-    color: var(--tertiary);
-    border-radius: 94px;
+	text-align: center;
+	background: var(--primary);
+	border: var(--tertiary) solid 5px;
+	color: var(--tertiary);
+	border-radius: 94px;
 }
 
 input {
-    margin: 13px;
+	margin: 13px;
 }
 
 select {
-    overflow: hidden;
-    padding-right: 15px;
-    appearance: none;
+	overflow: hidden;
+	padding-right: 15px;
+	appearance: none;
 }
 
 select:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 option[value="select one"] {
-    display: none;
+	display: none;
 }
 
 b,
 strong {
-    font-size: 22px;
+	font-size: 22px;
 }
 
 #browseHappy {
-    margin-top: 1em;
-    font-size: 20px;
+	margin-top: 1em;
+	font-size: 20px;
 }
 
 .dragAndDrop {
-    background-color: #D5D5D5;
+	background-color: #d5d5d5;
 }
 
 .dropTarget {
-    background-color: #FFF;
+	background-color: #fff;
 }
 
 #browseHappy iframe {
-    width: 100vw;
-    border: none;
+	width: 100vw;
+	border: none;
 }
 
 #forms li form {
-    display: inline-flex;
-    margin-top: 10px;
+	display: inline-flex;
+	margin-top: 10px;
 }
 
 #forms {
-    font-size: 1.5em;
-    padding: 0;
-    margin: 10px;
+	font-size: 1.5em;
+	padding: 0;
+	margin: 10px;
 }
 
 #forms li {
-    border: solid 1px var(--dark);
-    margin-top: 15px;
-    border-radius: 20px;
-    padding: 10px;
+	border: solid 1px var(--dark);
+	margin-top: 15px;
+	border-radius: 20px;
+	padding: 10px;
 }
 
 .disabled {
-    background-color: hsl(0 0% 97% / 0.3);
-    border-color: rgb(144 146 148);
-    opacity: 0.5;
+	background-color: hsl(0 0% 97% / 0.3);
+	border-color: rgb(144 146 148);
+	opacity: 0.5;
 }
 
 .current {
-    border: solid var(--green) !important;
-    background: #29A8472E;
+	border: solid var(--green) !important;
+	background: #29a8472e;
 }
 
 form,
 form > :not(br) {
-    width: 100%;
+	width: 100%;
 }
 
 .dragAndDrop,
 .dropTarget {
-    padding: 1px 2px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #767676;
-    border-radius: 2px;
-    margin: 1;
+	padding: 1px 2px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #767676;
+	border-radius: 2px;
+	margin: 1;
 }
